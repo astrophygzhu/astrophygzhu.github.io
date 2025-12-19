@@ -1,0 +1,214 @@
+/* 全局重置和基础样式 */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 变量定义 */
+:root {
+  --bg: #f4f6fb;
+  --sidebar-bg: #eef1fb;
+  --sidebar-accent: #eef1fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --border: #dbe0ee;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+Sidebar
+.sidebar {
+  background: linear-gradient(180deg, var(--sidebar-bg), var(--sidebar-accent));
+  border-right: 1px solid var(--border);
+  padding: 28px 22px;
+}
+
+/* 侧边栏容器 */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* 确保flex容器正确收缩 */
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 8px;
+  margin: 4px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--accent);
+  background: #d1dcff;
+}
+
+/* Main content */
+.content {
+  background: #ffffff;
+  padding: 40px 56px;
+  max-width: 980px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  /* 可以添加移动端的额外样式 */
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .content {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+/* 联系方式区域（固定在底部） */
+.contact-info-bottom {
+  margin-top: auto; /* 这个属性会将元素推到容器底部 */
+  padding-top: 25px;
+  padding-left: 8px; /* 与导航链接的padding-left对齐 */
+  border-top: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.contact-info-bottom h4 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+  margin-top: 3px;
+  color: var(--muted);
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #4338ca; /* 稍深的蓝色 */
+  text-decoration: underline;
+}
+
+.contact-item span {
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* 导航区域自适应 */
+.nav {
+  flex: 1;
+  padding-bottom: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+  .sidebar {
+    height: auto;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .contact-info-bottom {
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+  }
+  
+  .nav {
+    padding-bottom: 0;
+  }
+}
+
+/* 在 style.css 中添加 */
+.sidebar-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.4;
+}

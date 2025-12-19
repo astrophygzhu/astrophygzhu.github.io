@@ -1,0 +1,114 @@
+/* 全局重置和基础样式 */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 变量定义 */
+:root {
+  --bg: #f4f6fb;
+  --sidebar-bg: #eef1fb;
+  --sidebar-accent: #eef1fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --border: #dbe0ee;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(180deg, var(--sidebar-bg), var(--sidebar-accent));
+  border-right: 1px solid var(--border);
+  padding: 28px 22px;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 8px;
+  margin: 4px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--accent);
+  background: #d1dcff;
+}
+
+/* Main content */
+.content {
+  background: #ffffff;
+  padding: 40px 56px;
+  max-width: 980px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  /* 可以添加移动端的额外样式 */
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .content {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
