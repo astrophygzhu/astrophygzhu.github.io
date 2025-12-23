@@ -1,7 +1,7 @@
-.container {
+/* .container {
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 
 /* 头部样式 */
 header {
@@ -184,14 +184,14 @@ h1 {
 }
 
 /* 页脚样式 */
-footer {
+/* footer {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
     color: #666;
     font-size: 0.9rem;
     border-top: 1px solid var(--border-color);
-}
+} */
 
 /* 响应式设计 */
 @media (max-width: 768px) {
