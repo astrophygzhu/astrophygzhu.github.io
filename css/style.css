@@ -88,7 +88,7 @@ body {
   font-size: 0.95rem;
 }
 
-.nav a:hover,
+/* .nav a:hover, */
 .nav a.active {
   color: var(--accent);
   background: #d1dcff;
@@ -213,8 +213,8 @@ hr {
   display: flex;
   align-items: flex-start;
   margin-bottom: 16px;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.8rem;
+  line-height: 2.0;
 }
 
 .contact-icon {
@@ -230,9 +230,13 @@ hr {
   transition: color 0.2s ease;
 }
 
-.contact-item a:hover {
+/* .contact-item a:hover {
   color: var(--accent-dark);
   text-decoration: underline;
+} */
+
+.contact-info-bottom .contact-item {
+  width: 220px; /* 或固定宽度如 220px */
 }
 
 .contact-item span {
@@ -404,20 +408,20 @@ hr {
   font-weight: 500;
 }
 
-.button:hover {
+/* .button:hover {
   background: var(--accent-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-}
+} */
 
 .button-secondary {
   background: #e5e7eb;
   color: var(--text);
 }
 
-.button-secondary:hover {
+/* .button-secondary:hover {
   background: #d1d5db;
-}
+} */
 
 .button-small {
   padding: 6px 12px;
@@ -483,9 +487,9 @@ th {
   color: var(--text);
 }
 
-tr:hover {
+/* tr:hover {
   background: #f9fafb;
-}
+} */
 
 /* ==========================================================================
    图像和媒体
@@ -669,10 +673,10 @@ img {
     transition: none !important;
   }
   
-  .menu-item:hover,
+  /* .menu-item:hover,
   .button:hover {
     transform: none !important;
-  }
+  } */
 }
 
 @media (prefers-contrast: high) {
@@ -841,5 +845,445 @@ img {
   to { 
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/************************ 成员卡片 ************************/
+/* ==========================================================================
+   成员页面整体样式
+   ========================================================================== */
+.members-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h1 {
+  color: #4f46e5;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   负责人特殊卡片样式
+   ========================================================================== */
+.leader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f4ff 100%);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 15px 40px rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #a855f7);
+}
+
+.leader-card::after {
+  content: 'Group Leader';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #4f46e5;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 负责人头像 */
+.leader-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 6px solid white;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.leader-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* .leader-card:hover .leader-avatar img {
+  transform: scale(1.05);
+} */
+
+/* 负责人信息 */
+.leader-info {
+  max-width: 700px;
+}
+
+.leader-info h2 {
+  color: #4f46e5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.leader-title {
+  color: #7c3aed;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  display: inline-block;
+}
+
+.leader-interests {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.leader-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  /* background: rgb(234, 249, 255); */
+  border-radius: 10px;
+  /* border: 1px solid #e5e7eb; */
+  transition: all 0.3s ease;
+}
+
+/* .contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #4f46e5;
+} */
+
+.contact-item a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item i {
+  color: #7c3aed;
+}
+
+.leader-contact .contact-item {
+  width: 200px; /* 固定宽度 */
+  /* 或 */
+  min-width: 180px; /* 最小宽度 */
+  max-width: 250px; /* 最大宽度 */
+}
+
+/* ==========================================================================
+   其他成员网格布局（三列）
+   ========================================================================== */
+.other-members-section {
+  margin-top: 50px;
+}
+
+.other-members-section h3 {
+  text-align: center;
+  color: #1f2937;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.other-members-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 2px;
+}
+
+.other-members-section h4 {
+  text-align: center;
+  color: #1f2937;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* 成员网格 */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* 成员卡片 */
+.member-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* .member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.15);
+  border-color: #4f46e5;
+} */
+
+/* 成员头像 */
+.member-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid #f0f4ff;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* .member-card:hover .member-avatar img {
+  transform: scale(1.1);
+} */
+
+/* 成员信息 */
+.member-info h4 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.member-title {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.member-interests {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.member-email {
+  margin-top: auto;
+}
+
+.member-email a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.member-email a:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+/* 成员角色标签 */
+.member-role {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f0f4ff;
+  color: #4f46e5;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   响应式设计
+   ========================================================================== */
+
+/* 平板 */
+@media (max-width: 992px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .leader-card {
+    padding: 30px;
+  }
+  
+  .leader-avatar {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .leader-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-item {
+    padding: 8px 15px;
+  }
+}
+
+/* 大手机 */
+@media (max-width: 768px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .leader-card {
+    padding: 25px 20px;
+  }
+  
+  .leader-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .section-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 小手机 */
+@media (max-width: 480px) {
+  .members-section {
+    padding: 20px 15px;
+  }
+  
+  .leader-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .leader-info h2 {
+    font-size: 1.6rem;
+  }
+  
+  .leader-title {
+    font-size: 1.1rem;
+  }
+  
+  .leader-interests {
+    font-size: 1rem;
+  }
+  
+  .member-avatar {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* 超大屏幕 */
+@media (min-width: 1400px) {
+  .members-section {
+    max-width: 1300px;
+  }
+  
+  .members-grid {
+    gap: 35px;
+  }
+  
+  .member-card {
+    padding: 30px;
+  }
+  
+  .member-avatar {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .leader-card {
+    border: 2px solid #4f46e5;
+    box-shadow: none;
+  }
+  
+  .members-grid {
+    display: block;
+  }
+  
+  .member-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+@media (max-width: 768px) {
+  .leader-contact .contact-item {
+    width: 100%; /* 在小屏幕上占满容器 */
+  }
+  
+  .contact-info-bottom .contact-item {
+    width: auto; /* 或调整为适合的宽度 */
   }
 }
