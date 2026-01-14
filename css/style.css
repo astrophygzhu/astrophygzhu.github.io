@@ -1288,3 +1288,67 @@ img {
     width: auto; /* 或调整为适合的宽度 */
   }
 }
+
+
+
+/* 在 style.css 中添加以下样式 */
+
+/* 年份列表样式 */
+.year-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.year-item {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.year-item:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.year-item:active {
+  transform: translateY(-1px);
+}
+
+/* 或者更简约的版本 */
+.year-list-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.year-item-simple {
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  background-color: var(--sidebar-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-left: 4px solid var(--accent);
+  transition: all 0.2s ease;
+}
+
+.year-item-simple:hover {
+  background-color: #f0f4ff;
+  transform: translateX(5px);
+}
