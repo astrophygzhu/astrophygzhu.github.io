@@ -2,42 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GGNV</title>
-<link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GGNV</title>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <!-- 样式 -->
 
-<!-- 修改body的类名为homepage-body -->
-<body class="homepage-body" lang="en-us">
-<!-- 主要居中内容容器 -->
-<div class="homepage-container">
-<!-- 抬头部分 -->
-<section class="homepage-header">
-<h1 class="author">Guangzhou Galactic Nuclei Voyagers</h1>
-<h2 class="intro">Extragalactic Astrophysics</h2>
-<h3 class="info">This webpage introduces the Active Galactic Nuclei Physics Group at the Center for Astrophysics, Guangzhou University. Welcome to communicate with us.</h3>
-</section>
+<body>
+  <!-- 分屏容器：背景右侧，内容左侧 -->
+  <div class="homepage">
 
-<!-- 主菜单部分 -->
-<section class="homepage-menu">
-<h4><a class="menu-item" href="./research/research.html"><strong>Research</strong></a></h4>
-<h4><a class="menu-item" href="./members/member.html"><strong>Members</strong></a></h4>
-<h4><a class="menu-item" href="./publications/publication.html"><strong>Publications</strong></a></h4>
-<h4><a class="menu-item" href="./event/event.html"><strong>Events</strong></a></h4>
-<h4><a class="menu-item" href="./project/project.html"><strong>Projects</strong></a></h4>
-<!-- <h4><a class="menu-item" href="./projects/"><strong>Project</strong></a></h4> -->
-</section>
-</div>
-  
-<!-- 脚注部分 -->
-<footer class="homepage-footer">
-<h6 class="extra-footer">Reach us at fjh@gzhu.edu.cn</h6>
-<h6 class="copyright">© 2025- Guangzhou Galactic Nuclei Voyagers</h6>
-</footer>
+    <!-- 左侧 · 全部内容区（标题、菜单、页脚） -->
+    <div class="content-panel">
+      <div class="content-inner">
 
- 
+        <header class="group-title">
+          <h1 class="group-name">Guangzhou Galactic Nuclei Voyagers</h1>
+          <h2 class="group-sub">Extragalactic Astrophysics</h2>
+          <p class="group-desc">
+            This webpage introduces the Active Galactic Nuclei Physics Group 
+            at the Center for Astrophysics, Guangzhou University. 
+            Welcome to communicate with us.
+          </p>
+        </header>
+
+        <!-- 星轨菜单 -->
+        <ul class="menu-list">
+          <li class="menu-item"><a class="menu-link" href="./research/research.html"><strong>Research</strong></a></li>
+          <li class="menu-item"><a class="menu-link" href="./members/member.html"><strong>Members</strong></a></li>
+          <li class="menu-item"><a class="menu-link" href="./publications/publication.html"><strong>Publications</strong></a></li>
+          <li class="menu-item"><a class="menu-link" href="./event/event.html"><strong>Events</strong></a></li>
+          <li class="menu-item"><a class="menu-link" href="./project/project.html"><strong>Projects</strong></a></li>
+        </ul>
+
+        <footer class="footer-info">
+          <div class="footer-email">📧 <a href="mailto:fjh@gzhu.edu.cn">fjh@gzhu.edu.cn</a> — Reach us</div>
+          <div class="footer-copy">© 2025- Guangzhou Galactic Nuclei Voyagers</div>
+        </footer>
+
+      </div> <!-- .content-inner -->
+    </div> <!-- .content-panel -->
+
+    <!-- 右侧 · 背景区 -->
+    <div class="bg-panel" role="presentation" aria-label="银河系核区背景图"></div>
+
+  </div> <!-- .homepage -->
 </body>
-
 </html>

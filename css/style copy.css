@@ -1382,19 +1382,19 @@ img {
   justify-content: center;
   align-items: center;
   padding: 40px 30px;
-  /* background: #f9fbfd;             与背景图区分，也可设为纯白 */
+  background: #f9fbfd;             /* 与背景图区分，也可设为纯白 */
   min-height: 100vh;
 }
 
 /* 右列中的白色卡片——复用原样式并微调 */
 .homepage-split .homepage-container {
   background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
   border-radius: 24px;
   padding: 50px 40px;
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 100%;
-  /* box-shadow: 0 20px 35px rgba(0,0,0,0.1); */
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
   margin: 0 auto;
   border: 1px solid rgba(255,255,255,0.3);
 }

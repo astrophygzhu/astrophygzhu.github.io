@@ -1,0 +1,252 @@
+/* ================================================
+主页样式
+   ================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafcff;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+/* ----- 主布局：两列等宽，背景右侧，内容左侧 ----- */
+.homepage {
+  display: grid;
+  grid-template-columns: 3fr 6.3fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ----- 左侧：内容区 · 纯白极简，优雅留白 ----- */
+.content-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 3rem 3.5rem;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  z-index: 2;
+}
+
+.content-inner {
+  max-width: 560px;
+  width: 100%;
+}
+
+/* 标题区域 */
+.group-title {
+  margin-bottom: 2.2rem;
+}
+
+.group-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e1e2f;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  border-left: 6px solid #4f46e5;
+  padding-left: 1rem;
+}
+
+.group-sub {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.group-desc {
+  font-size: 1rem;
+  color: #4b5565;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  max-width: 500px;
+}
+
+/* ----- 全新菜单 · 星轨意象 -----
+   大文字 + 左侧光轨 + 悬浮动效
+   无下划线，无按钮背景
+*/
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin: 2.8rem 0 2.5rem 0;
+  width: 100%;
+  list-style: none;
+}
+
+.menu-item {
+  width: 100%;
+}
+
+.menu-link {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 550;
+  color: #1e293b;
+  text-decoration: none;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  letter-spacing: -0.3px;
+  border: none;
+  background: transparent;
+}
+
+/* 左侧动态光轨 —— 模拟粒子轨迹或谱线 */
+.menu-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12%;
+  width: 6px;
+  height: 76%;
+  background: linear-gradient(145deg, #3b3f8c, #5f4b9e);
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.2);
+}
+
+/* 悬浮时：光轨变亮、变宽，文字右移，颜色加深 */
+.menu-link:hover {
+  color: #312e81;
+  transform: translateX(8px);
+}
+
+.menu-link:hover::before {
+  width: 10px;
+  opacity: 1;
+  background: linear-gradient(145deg, #4f46e5, #7c3aed);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+/* 菜单项内的 strong 保持字重 */
+.menu-link strong {
+  font-weight: 600;
+}
+
+/* 底部联系方式 */
+.footer-info {
+  margin-top: 2.8rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid #e9edf4;
+  width: 100%;
+}
+
+.footer-email,
+.footer-copy {
+  font-size: 0.9rem;
+  color: #4b5a6a;
+  line-height: 1.6;
+}
+
+.footer-email a {
+  color: #4f46e5;
+  text-decoration: none;
+  border-bottom: 1px dashed #b9c8fd;
+  transition: border 0.2s;
+}
+
+.footer-email a:hover {
+  border-bottom: 1px solid #4f46e5;
+}
+
+/* ----- 右侧：背景画布 ----- */
+.bg-panel {
+  background-image: url('../img/agn.png');  
+  /* background-image: url('../img/index_back.jpg');   */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* 深空叠加层 */
+.bg-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(10, 20, 40, 0.2) 0%, rgba(5, 10, 25, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* ===== 响应式 ===== */
+@media screen and (max-width: 768px) {
+  .homepage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh auto;
+  }
+
+  .bg-panel {
+    grid-row: 1 / 2;
+    min-height: 45vh;
+  }
+
+  .content-panel {
+    grid-row: 2 / 3;
+    padding: 2.5rem 1.8rem;
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.04);
+  }
+
+  .group-name {
+    font-size: 1.9rem;
+    padding-left: 0.8rem;
+  }
+
+  .menu-link {
+    font-size: 1.8rem;
+    padding-left: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-panel {
+    padding: 1.8rem 1.2rem;
+  }
+  .group-name {
+    font-size: 1.7rem;
+  }
+  .group-sub {
+    font-size: 1.1rem;
+  }
+  .menu-link {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+  }
+  .menu-link::before {
+    width: 5px;
+  }
+}
+
+/* 尊重用户动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .menu-link,
+  .menu-link::before {
+    transition: none;
+  }
+  .menu-link:hover {
+    transform: none;
+  }
+  .menu-link:hover::before {
+    width: 6px;
+  }
+}
