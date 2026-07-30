@@ -151,7 +151,114 @@ distinct states.
   
 </ul>
 
+<!-- 论文3 -->
+<li> 
+<a href="./Yang2026.pdf"  target="_blank">
+The Recognition of Blazar Candidate of Uncertain Type Based on Effective Spectral Index
 
+</a>
+<p>
+Yang et. al. 2026 <br>
+
+The Fermi/LAT (Large Area Telescope) source catalog contains approximately 4000
+blazars, of which over 40% are classified as Blazar Candidates of Uncertain type (BCUs). Determining
+the precise classification of these BCUs is crucial for advancing our understanding of blazar properties.
+In this study, we analyzed a sample of Fermi blazars by calculating their effective spectral indices
+between radio (R), optical (O), X-ray (X), and -ray ( ) bands, including αro, , , , , and
+. From this analysis, we obtained a sample of 3387 blazars with at least two valid spectral indices,
+consisting of 828 flat-spectrum radio quasars (FSRQs), 1382 BL Lacertae objects (BL Lacs), and 1177
+BCUs. Using the effective spectral indices as feature parameters, we performed unsupervised
+classification on the 1177 BCUs via the Gustafson-Kessel (GK) fuzzy clustering algorithm. The results
+show that: among the 1177 BCUs, 904 were classified as FSRQs and 273 as BL Lacs. For sources with
+inconsistent classifications between our study and previous literature, most were identified as FSRQs in
+our work but as BL Lacs in previous studies. From the perspective of multi-wavelength spectral indices,
+low-synchrotron-peaked BL Lacs (LBLs) exhibit similar radiation properties to FSRQs across multiple
+bands</p>
+<!-- 论文3 -->
+
+ <!-- 论文4 -->
+<li> 
+<a href="./Ma_2026_ApJ_1003_177.pdf"  target="_blank">
+Unified Scenario Study of Fanaroff−Riley Galaxy and Blazar
+
+</a>
+<p>
+Ma et. al. 2026 <br>
+
+Radio galaxies have two subclasses: Fanaroff−Riley type I (FR I) and type II (FR II). Within the radio-loud active galactic nucleus unification framework, FR I galaxies are considered to be the misaligned counterparts of BL Lacertae (BL Lac) objects, while FR II galaxies correspond to misaligned flat-spectrum radio quasars (FSRQs). In this work, we analyze 2124 sources, including 75 FR I galaxies, 147 FR II galaxies, 1142 BL Lac objects, and 760 FSRQs. After deriving their kinetic jet power (log Lkin), we classify the sample into two classes according to the Bayesian information criterion (BIC) method and the Gaussian mixture model (GMM) method. The results obtained are as follows: (1) The BIC analysis indicates that the sample is optimally divided into two classes. The GMM analysis assigns a crossing point at log L 45.38  kin = . Consequently, the sources are separated into the weak class (log L 45.38  kin < ) and the strong class (log L 45.38  kin > ). (2) Using the machine learning method, the sample is effectively classified into two populations in the log M log L  BH 1.4GHz plane. (3) The Support Vector Machine (SVM) approach is applied to derive a dividing line in the log R log L  radio kin plane. The accretion rates of sources above and below the dividing line exhibit a statistically significant difference. (4) By incorporating the core-dominance parameter (log Rradio), we identify three changing-look blazars located near the SVM dividing line in the log R log L  radio kin plane. The changing-look region is bounded by the two lines log L 0.02 log R 44.63  kin radio  = + and log L 0.02 log R 45.69  kin radio  = +.
+</p>
+<!-- 论文4 -->
+  
+</ul>
+
+ <!-- 论文5 -->
+<li> 
+<a href="./Yangwenxin2026.pdf"  target="_blank">
+Principal Component-Based Classification of Blazar Candidates of Uncertain Type in the 4FGL/LAT
+
+</a>
+<p>
+Yang et. al. 2026 <br>
+
+We adopted Principal Component Analysis (PCA), Linear Discriminant Analysis
+(LDA), and Support Vector Machines (SVM), to study classification for a sample of
+2708 Fermi blazars: 1142 BL Lac objects (BLLs), 759 flat spectrum radio quasars
+(FSRQs), and 807 blazar candidates of uncertain type (BCUs). From nine observ￾ables, the first three PCA components explained 78.4% of the variance, with the
+main differences among blazars linked to spectral shape, luminosity, and synchrotron
+dominance. We introduced a dimensionless separability metric to quantify and com￾pare the ability of different observable to distinguish BLLs from FSRQs. Using
+known BLLs and FSRQs, we trained an LDA model that achieved 90.6% accuracy
+(휅 = 0.81) and yielded 339 BLLs and 468 as FSRQs candidates for the 807 BCUs,
+while the SVM model achieved 83% accuracy yielding 349 BLL and 384 FSRQ candidates, with 71 identified as lowconfidence cases. The two models agreed on 81.7%
+of the BCUs with most differences occurring near classification boundaries. Combining LDA and SVM improves classification reliability: LDA reveals the global
+separation pattern, while SVM supports the linearity of LDA. These results indicate
+that the BLLFSRQ distinction reflects genuine physical differences and provide a
+robust approach for identifying uncertain sources</p>
+<!-- 论文5 -->
+  
+</ul>
+
+ <!-- 论文6 -->
+<li> 
+<a href="./Spectral_Type_Aware_Fine_Grained_Classification_of_Unknown_Fermi_LAT_4FGL_DR4_Sources.pdf"  target="_blank">
+Spectral Type Aware Fine Grained Classification of Unknown Fermi LAT 4FGL DR4 Sources
+
+</a>
+<p>
+Zhu et. al. 2026 <br>
+
+We present an uncertainty-aware, fine-grained multiclass classification of unresolved Fermi Large Area Telescope (LAT) γ-ray sources in the 4FGL-DR4 catalog. We define the unresolved-source population as blank-class sources, sources labeled unk, and blazar candidates of uncertain type, and classify them within a supervised 22-class catalog taxonomy. The baseline analysis represents each source through the three catalog spectral forms—PowerLaw (PL), LogParabola (LP), and PLSuper ExpCutoff (PLEC)—and compares TabNet, Random Forest, and a stacked TabNet+Random-Forest ensemble. The ensemble reaches accuracies of 92.95%, 92.45%, and 94.13% for the PL, LP, and PLEC representations, respectively. To quantify the role of feature choice, we further perform controlled ablations using an all-spectral configuration (AllSpec), which combines PL, LP, and PLEC parameters simultaneously, together with LP-only, PL-only, PLEC-only, and photometry-plus-variability configu rations. Each configuration is tested with and without uncertainty columns and with λmax = 0.1–0.5 for synthetic interpolation. The strongest ablation result is obtained by the uncertainty-aware PLEC configuration, with accuracy and weighted F1 of 0.9614. We also provide probabilistic predictions for all 4186 unresolved sources, including top-three class probabilities, full class-probability vectors, top-1–top-2 probability margins, and predictive entropy.
+</p>
+<!-- 论文6 -->
+
+</ul>
+
+ <!-- 论文7 -->
+<li> 
+<a href="./long2026.pdf"  target="_blank">
+The Jet Properties and Accretion Regime for Blazar Sequence
+
+</a>
+<p>
+Long et. al. 2026 <br>
+
+The puzzling bimodality displayed by blazars on the broad-band spectral indices (αro − αox) plane is still an open question. To investigate its physical origin, we compiled a sample comprising 136 flat spectrum radio quasars (FSRQs), 64 low-synchrotron-peaked BL Lac objects (LBLs), 39 intermediate synchrotron-peaked BL Lac objects (IBLs), and 105 high-synchrotron-peaked BL Lac objects (HBLs).  Our results show that (FSRQs+LBLs)→IBLs→HBLs follow a  ∠  -shaped evolutionary sequence on the αro − αox plane, with the average 5 GHz radio Doppler factor, jet power, and accretion Eddingtonratio decreasing along this  ∠  -shaped track. Additionally, the distributions of αox exhibit only slight differences among blazar subclasses, whereas those of αro and αrx differ significantly. Our results can be naturally explained if the distribution of blazars on the αro − αox plane is regulated by the accretion  rates and the Doppler beaming effect across different bands (δqi  i /δqj  j ). However, δi/δj plays a pivotal role in the distribution, while jet shape (q = 2(3)+αν) and spectral indices (αν) play a minor role. Our results suggest that FSRQs+LBLs are strong-jet sources coupled with radiatively efficient accretion, and their jets are accelerated to a larger distance from the core and still maintain relativistic speeds down to the radio region; HBLs are weak-jet sources coupled with radiatively inefficient accretion, and their jets may begin to decelerate in the optical region and exhibit sub-relativistic speeds as they propagate to the radio region. IBLs are regarded as transitional objects between FSRQs+LBLs and HBLs.</p>
+<!-- 论文7 -->
+  
+</ul>
+
+ <!-- 论文8 -->
+<li> 
+<a href="./ye et al. MNRAS 2026.pdf"  target="_blank">
+Radio–Gamma-Ray Properties and High-Energy Implications for Fermi Blazars
+
+</a>
+<p>
+Ye et. al. 2026 <br>
+
+Radio and γ-ray emissions in blazars, a subclass of active galactic nuclei (AGNs), provide important insight into their highenergy radiation processes. We studied the relation between radio and γ-ray emissions using a large sample of 1687 Fermi blazars, based on the Radio Fundamental Catalogue and the latest Third Data Release of the Fourth Fermi AGN Catalogue. A clear correlation between radio and γ-ray fluxes for both BL Lacertae objects (BL Lacs) and flat-spectrum radio quasars (FSRQs) suggests a synchrotron self-Compton (SSC) contribution to both subclasses. The ratio of γ-ray and radio emissions, γ-ray loudness (Gr), is further examined with the γ-ray photon index (Γγ) and the synchrotron peak frequency (νpeak). An anti-correlation between Gr and Γγ is explained by the shift of the spectral energy distribution rather than the Compton cooling effect. We found that Gr shows a positive dependence on νpeak for low-synchrotron-peaked BL Lacs (LBLs) and FSRQs, in line with the SSC-contributed scenario, although additional external Compton contributions may account for the substantial scatter observed in LBLs and FSRQs. In contrast, high-synchrotron-peaked BL Lacs (HBLs) reach the plateau of Gr between log(νpeak/Hz) ≃ 15.5 − 16, possibly indicating the transition from the Thomson to the Klein–Nishina (KN) regime. Interpreting this feature within a one-zone SSC framework could constrain the magnetic field strength of −4.14 < log(B/G) < −1.69 for those HBLs affected by the KN suppression.</p>
+<!-- 论文8 -->
+  
+</ul>
 <!-- 文章列表 -->
 <!------------------------ 2026 ------------------------>
 
